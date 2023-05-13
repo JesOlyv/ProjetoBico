@@ -1,0 +1,59 @@
+CREATE TABLE services_requests (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  professional TEXT,
+  description TEXT
+);
+
+INSERT INTO services_requests (professional, description) VALUES ('profissional', 'descrição do serviço'); //inserção de serviços
+ex: INSERT INTO services_requests (professional, description) VALUES ('Pedreiro', 'Construção de uma parede de alvenaria');
+
+
+
+
+ 
+
+CREATE TABLE cliente (
+  idcliente INTEGER  NOT NULL  ,
+  none VARCHAR  
+  telefone
+  endereço
+  idade
+  e-mail
+  senha    ,
+PRIMARY KEY(idcliente));
+
+CREATE TABLE profissionais (
+  idprofissionais INTEGER  NOT NULL  ,
+  none VARCHAR  
+  telefone
+  endereço
+  idade
+  profissão
+  experiencia profissional
+  e-mail
+  senha    ,
+PRIMARY KEY(idprofissional));
+
+ 
+
+CREATE TABLE cliente_has_servico (
+  idcliente INTEGER  NOT NULL  ,
+  idservico INTEGER  NOT NULL  ,
+  dataservico TIMESTAMP      ,
+PRIMARY KEY(idcliente, idservico),
+  FOREIGN KEY(idcliente)
+    REFERENCES cliente(idcliente),
+  FOREIGN KEY(idservico) REFERENCES servico(idservico)  );
+
+CREATE TABLE servico_has_profissionais (
+  idprofissionais INTEGER  NOT NULL  ,
+  idservico INTEGER  NOT NULL  ,
+  dataservico TIMESTAMP      ,
+PRIMARY KEY(idcservico, idprofissionais),
+  FOREIGN KEY(idprofissionais)
+    REFERENCES profissionais(idprofissionais),
+  FOREIGN KEY(idservico) REFERENCES servico(idservico)  );
+
+
+
+
