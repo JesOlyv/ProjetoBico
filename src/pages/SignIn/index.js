@@ -37,12 +37,6 @@ export default function SignIn() {
           <Text style={styles.buttonText}>Não possui uma conta? Cadastre-se</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate('TelaInicial')}
-        >
-          <Text style={styles.buttonText}>Acessar Profissional</Text>
-        </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}

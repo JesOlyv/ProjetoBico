@@ -27,8 +27,8 @@ export default function Welcome() {
             </View>
 
             <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title}>Profissionais e  Clientes! </Text>
-                      <Text style={styles.text}>App Freelancer</Text>
+                <Text style={styles.title}>Régis Construções </Text>
+                      <Text style={styles.text}>Aplicativo de Catalogo dos nossos serviços</Text>
                 
                 <TouchableOpacity 
                 style={styles.button}
